@@ -2,12 +2,6 @@ import 'package:flutter/material.dart';
 import 'package:flutter_osm_plugin/flutter_osm_plugin.dart';
 
 class MyHomePage extends StatefulWidget {
-  const MyHomePage({
-    Key? key,
-    required this.title,
-  }) : super(key: key);
-
-  final String title;
   @override
   State<MyHomePage> createState() => _MyHomePageState();
 }
@@ -29,7 +23,7 @@ class _MyHomePageState extends State<MyHomePage> {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: Text(widget.title),
+        title: Text('Fayoum University Map'),
       ),
       body: OSMFlutter(
         controller: _myController,
@@ -42,7 +36,7 @@ class _MyHomePageState extends State<MyHomePage> {
         maxZoomLevel: 18,
         stepZoom: 1.0,
         roadConfiguration: const RoadOption(
-          roadColor: Colors.grey,
+          roadColor: Colors.black38,
         ),
         userLocationMarker: UserLocationMaker(
           personMarker: const MarkerIcon(
@@ -55,7 +49,8 @@ class _MyHomePageState extends State<MyHomePage> {
           directionArrowMarker: const MarkerIcon(
             icon: Icon(
               Icons.person,
-              size: 60,
+              size: 90,
+              color: Colors.yellow,
             ),
           ),
         ),
